@@ -11,8 +11,12 @@ document.querySelector(".button").addEventListener("click", function () {
 
 function validateEmailAddress() {
   var emailAddress = document.querySelector(".form-text").value;
-  if (emailAddress.includes("@") && emailAddress.includes(".")) {
-    return true;
+  if (!emailAddress.includes("")) {
+    if (emailAddress.includes("@") && emailAddress.includes(".")) {
+      return true;
+    } else {
+      return false;
+    }
   } else {
     return false;
   }
